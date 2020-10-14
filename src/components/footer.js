@@ -1,19 +1,25 @@
 import React from 'react'
 import brandLogo from './img/logo1.png'
+import instagram from "./svg/instagram.svg" 
+import linkedin from "./svg/linkedin.svg" 
+import youtube from "./svg/youtube.svg" 
+import facebook from "./svg/facebook.svg" 
+import twitter from "./svg/twitter.svg" 
+import pinterest from "./svg/pinterest.svg" 
 
 function footer() {
     return (
         <div>
 
-              <section class="footer-section">
-    <div class="container">
-      <div class="footer-logo text-center">
+              <section className="footer-section">
+    <div className="container">
+      <div className="footer-logo text-center">
         <a href="index.html"><img src={brandLogo} alt="" style={{width: "10vh" , height: "10vh"}} /></a>
         <h3 style={{color: "#ffffff"}}>thepappustore</h3>
       </div>
-      <div class="row">
-        <div class="col-lg-4 col-sm-12">
-          <div class="footer-widget about-widget">
+      <div className="row">
+        <div className="col-lg-4 col-sm-12">
+          <div className="footer-widget about-widget">
             <h2>About</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -24,8 +30,8 @@ function footer() {
             <img src="img/cards.png" alt="" />
           </div>
         </div>
-        <div class="col-lg-4 col-sm-12">
-          <div class="footer-widget about-widget">
+        <div className="col-lg-4 col-sm-12">
+          <div className="footer-widget about-widget">
             <h2>Useful Links</h2>
             <ul>
               <li><a href="">About Us</a></li>
@@ -46,34 +52,34 @@ function footer() {
         </div>
 
 
-        <div class="col-lg-4 col-sm-12">
-          <div class="footer-widget contact-widget">
+        <div className="col-lg-4 col-sm-12">
+          <div className="footer-widget contact-widget">
             <h2>Address</h2>
-            <div class="con-info">
+            <div className="con-info">
               <p>thepappustore Ltd</p>
             </div>
-            <div class="con-info">
+            <div className="con-info">
               <p>New Delhi -06, P.O. BOX 68</p>
             </div>
-            <div class="con-info">
+            <div className="con-info">
               <p>+91 345 7953 32453</p>
             </div>
-            <div class="con-info">
+            <div className="con-info">
               <p>office@youremail.com</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="social-links-warp row">
-      <div class="container">
-        <div class="social-links">
-          <a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-          <a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
-          <a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
-          <a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
-          <a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
-          <a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
+    <div className="social-links-warp row">
+      <div className="container">
+        <div className="social-links">
+          <a href="" className="instagram"><img src={instagram} />  <span>instagram</span></a>
+          <a href="" className="pinterest"><img src={pinterest} /><span>pinterest</span></a>
+          <a href="" className="facebook"><img src={facebook} /><span>facebook</span></a>
+          <a href="" className="tumblr"><img src={linkedin} /> <span>linkedin</span></a>
+          <a href="" className="twitter"><img src={twitter} /> <span>twitter</span></a>
+          <a href="" className="youtube"><img src={youtube} /> <span>youtube</span></a>
         </div>
       </div>
     </div>
