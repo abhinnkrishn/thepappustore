@@ -246,12 +246,16 @@ ol {
 }
 
 /* ----------------
-  Features
+  HAMBURGER
 ---------------------*/
-
-/* ------------------
-  Features section
----------------------*/
+.hamburger {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  right: 1rem;
+  top: 0;
+  cursor: pointer;
+}
 
 /* ----------------
   Footer section
@@ -345,32 +349,6 @@ ol {
   margin-right: 22px;
 }
 
-.fw-latest-post-widget .lp-content {
-  overflow: hidden;
-  padding-top: 2px;
-}
-
-.fw-latest-post-widget .lp-content h6 {
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  opacity: 0.25;
-  color: #717171;
-  margin-bottom: 1px;
-}
-
-.fw-latest-post-widget .lp-content span {
-  display: block;
-  font-size: 12px;
-  color: #8f8f8f;
-  margin-bottom: 4px;
-}
-
-.fw-latest-post-widget .lp-content .readmore {
-  font-size: 12px;
-  color: #fa901f;
-}
-
 .contact-widget .con-info span {
   float: left;
   color: #fa901f;
@@ -442,28 +420,23 @@ ol {
   .container {
     max-width: 1175px;
   }
+  .hamburger {
+    display: none;
+  }
 }
 
 @media (max-width: 1350px) {
-  .product-slider .owl-nav {
-    position: relative;
-    left: 0;
-    top: 0;
-    text-align: center;
-    padding-top: 20px;
-  }
-  .product-slider .owl-nav button.owl-prev,
-  .product-slider .owl-nav button.owl-next {
-    float: none;
-    left: 0;
-    right: 0;
-    margin: 0 10px;
+  .hamburger {
+    display: none;
   }
 }
 
 /* Medium screen : 992px. */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hamburger {
+    display: none;
+  }
   .hero-slider .slider-nav-warp {
     max-width: 930px;
   }
@@ -478,6 +451,9 @@ ol {
 /* Tablet :768px. */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hamburger {
+    display: none;
+  }
   .site-logo {
     margin-bottom: 20px;
   }
@@ -495,15 +471,6 @@ ol {
   }
   .main-menu li a {
     margin-right: 30px;
-  }
-  .hero-slider .slider-nav-warp {
-    max-width: 690px;
-  }
-  .hero-slider .hs-item .offer-card {
-    top: 20px;
-  }
-  .feature h2 {
-    font-size: 18px;
   }
   .product-filter-menu {
     text-align: center;
@@ -525,18 +492,14 @@ ol {
   .product-thumbs {
     margin-bottom: 50px;
   }
-  .map {
-    position: relative;
-    width: 100%;
-    background: #ddd;
-    height: 400px;
-    margin-top: 70px;
-  }
 }
 
 /* Large Mobile :480px. */
 
 @media only screen and (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
   .site-logo {
     margin-bottom: 20px;
   }
@@ -549,40 +512,7 @@ ol {
   .main-menu {
     display: none;
   }
-  .slicknav_btn {
-    background-color: #565656;
-  }
-  .slicknav_menu {
-    background: #282828;
-    display: block;
-  }
-  .slicknav_menu .new {
-    font-size: 10px;
-    font-weight: 700;
-    color: #fff;
-    background: #f51167;
-    line-height: 1;
-    text-transform: uppercase;
-    padding: 5px 9px 1px;
-    border-radius: 15px;
-    width: 42px;
-    margin-left: 5px;
-  }
-  .hero-slider .slider-nav-warp {
-    max-width: 510px;
-  }
-  .hero-slider .hs-item h2 {
-    font-size: 50px;
-  }
-  .hero-slider .hs-item .offer-card {
-    display: none;
-  }
-  .product-filter-menu {
-    text-align: center;
-  }
-  .product-filter-menu li {
-    margin: 0 2px 10px;
-  }
+
   .footer-widget ul {
     margin-right: 25px;
   }
@@ -625,6 +555,9 @@ ol {
 /* Medium Mobile :480px. */
 
 @media only screen and (min-width: 576px) and (max-width: 766px) {
+  .hamburger {
+    display: block;
+  }
   .hero-slider .slider-nav-warp {
     padding: 0 15px;
   }
@@ -640,6 +573,9 @@ ol {
 /* Small Mobile :320px. */
 
 @media only screen and (max-width: 479px) {
+  .hamburger {
+    display: block;
+  }
   .hero-slider .slider-nav-warp {
     max-width: 510px;
     padding: 0 15px;
@@ -653,16 +589,7 @@ ol {
   .section-title h2 {
     font-size: 28px;
   }
-  .feature h2 {
-    font-size: 18px;
-  }
-  .banner .tag-new {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 18px;
-    right: 0;
-    top: 0;
-  }
+
   .social-links {
     text-align: center;
   }

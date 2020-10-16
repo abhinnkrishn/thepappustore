@@ -10,6 +10,7 @@ import './components/css/bootstrap.min.css'
 
 import Navbar from './components/Navbar'
 import Footer from './components/footer'
+import Product from "./product"
 
 function App() {
     return (
@@ -18,6 +19,8 @@ function App() {
             <Route path="/" exact component={Navbar} />
             <Route path="/login" exact component={Login}  name="Users"/>
             <Route path="/" exact component={Footer} />
+            <Route path="/product" exact component={Product} />
+
         </div>
         </Router>
     )

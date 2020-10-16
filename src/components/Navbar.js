@@ -1,24 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import './login'
-// import firebase from 'firebase'
+import {searchClick} from "../javascript/productSearch.js"
+// import {googleSignin} from '../firebase/googleLogin'
+// Styles
 import './css/style.css'
 import './css/bootstrap.min.css'
-import './css/index.css'
+// Images/SVG
 import brandLogo from "./img/logo1.png"
 import userProfile from "./svg/user-profile.svg"
 import shoppingCart from "./svg/shopping-cart.svg"
+import searchIcon from "./svg/search.svg"
+import hamburger from "./svg/hamburger.svg"
+
 
 
 
 function Navbar() {
 
-  
      return (
-
-       
-       <div>
-       
+  <div>   
     <header className="header-section">
     <div className="header-top">
       <div className="container">
@@ -28,18 +28,20 @@ function Navbar() {
             <a href="./index.html" className="site-logo">
               <img src={brandLogo} alt="logo" style={{width: "10vh" , height: "10vh"}} />
             </a>
+              <div className="hamburger"> <img src={hamburger} width="35px" /> </div>
+
           </div>
           <div className="col-xl-6 col-lg-5">
             <div className="header-search-form">
               <input id="search-input" type="text" placeholder="Search on thepappustore ...." />
-              <button id="search-btn"><i className="flaticon-search"></i></button>
+              <button id="search-btn" onClick={searchClick} > <img src={searchIcon} width="25px  " /> </button>
             </div>
           </div>
           <div className="col-xl-4 col-lg-5">
             <div className="user-panel">
               <div className="up-item">
                 <img src={userProfile} className="user-profile-image" />
-                <Link to={'/login'}>Sign In</Link> 
+                <Link to={'/login'} className="signin" >Sign In</Link> 
               </div>
               <div className="up-item">
                 <div className="shopping-card">

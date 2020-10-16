@@ -5,9 +5,7 @@ import brandLogo from "./components/img/logo1.png"
 import {googleSignin} from './firebase/googleLogin'
 
 function login() {
-
-    
-
+        
         return (
             <div className="background-div" >
                 <nav className="login-nav" >
