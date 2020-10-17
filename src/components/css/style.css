@@ -159,10 +159,6 @@ ol {
   background: #282828;
 }
 
-.slicknav_menu {
-  display: none;
-}
-
 .main-menu {
   list-style: none;
 }
@@ -203,10 +199,6 @@ ol {
   margin-top: 0;
 }
 
-.main-menu li:hover > a {
-  text-decoration: underline;
-}
-
 .main-menu .sub-menu {
   position: absolute;
   list-style: none;
@@ -241,14 +233,11 @@ ol {
   color: #fa901f;
 }
 
-.nav-switch {
-  display: none;
-}
-
 /* ----------------
   HAMBURGER
 ---------------------*/
-.hamburger {
+.hamburger,
+.ham-hide {
   position: absolute;
   z-index: 1;
   display: none;
@@ -497,8 +486,50 @@ ol {
 /* Large Mobile :480px. */
 
 @media only screen and (max-width: 767px) {
+  /* side nav responsive design */
   .hamburger {
     display: block;
+  }
+  .ham-hide {
+    display: none;
+  }
+  .main-navbar {
+    display: none;
+    transition: 3s ease;
+  }
+  .main-menu {
+    position: relative;
+    display: none;
+    transition: 3s ease;
+    z-index: 3;
+    text-align: center;
+    display: block;
+  }
+  .main-menu li {
+    display: block;
+  }
+
+  .main-menu li a {
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .main-menu li a .new {
+    position: absolute;
+    top: -4px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: #fa901f;
+    line-height: 1;
+    text-transform: uppercase;
+    left: -50;
+    padding: 5px 9px 1px;
+    border-radius: 15px;
+    width: 42px;
+  }
+  .main-menu .sub-menu {
+    left: 25%;
   }
   .site-logo {
     margin-bottom: 20px;
@@ -508,9 +539,6 @@ ol {
   }
   .user-panel {
     text-align: center;
-  }
-  .main-menu {
-    display: none;
   }
 
   .footer-widget ul {
@@ -558,16 +586,6 @@ ol {
   .hamburger {
     display: block;
   }
-  .hero-slider .slider-nav-warp {
-    padding: 0 15px;
-  }
-  .banner .tag-new {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 18px;
-    right: 0;
-    top: 0;
-  }
 }
 
 /* Small Mobile :320px. */
@@ -576,20 +594,6 @@ ol {
   .hamburger {
     display: block;
   }
-  .hero-slider .slider-nav-warp {
-    max-width: 510px;
-    padding: 0 15px;
-  }
-  .hero-slider .hs-item h2 {
-    font-size: 35px;
-  }
-  .hero-slider .hs-item .sb-line {
-    margin-bottom: 15px;
-  }
-  .section-title h2 {
-    font-size: 28px;
-  }
-
   .social-links {
     text-align: center;
   }

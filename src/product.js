@@ -1,26 +1,16 @@
 import React from 'react'
+import Card from "./components/card"
+import Navbar from "./components/Navbar"
+import Footer from "./components/footer"
+
 
 function product() {
 
-    
-    function extarctJSON() {
-        fetch("./json/products.json")
-        .then(res => res.json())
-        .then(data => setData(data))  
-    }
-    
-    let productlist;
-
-     function setData(data) {
-              productlist = data;
-             console.log(productlist);
-        }
-
-
-        return (
+         return (
             <div>
-                <button onClick={extarctJSON} >data</button>
-               
+            <Navbar />
+                <Card />
+            <Footer />
             </div>
         )
 }

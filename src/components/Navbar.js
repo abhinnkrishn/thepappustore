@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {searchClick} from "../javascript/productSearch.js"
-// import {googleSignin} from '../firebase/googleLogin'
 // Styles
 import './css/style.css'
 import './css/bootstrap.min.css'
@@ -11,11 +10,38 @@ import userProfile from "./svg/user-profile.svg"
 import shoppingCart from "./svg/shopping-cart.svg"
 import searchIcon from "./svg/search.svg"
 import hamburger from "./svg/hamburger.svg"
-
-
+import cross from "./svg/hide.svg"
 
 
 function Navbar() {
+
+  function hamShow() {
+      // Show NAV
+      document.querySelector(".main-navbar").style.display = "block";
+      document.querySelector(".main-menu").style.display = "block";
+      document.querySelector(".ham-hide").style.display = "block";
+      document.querySelector(".hamburger").style.display = "none";
+  }
+  function hamHide() {
+    //Hide NAV
+      document.querySelector(".main-navbar").style.display = "none";
+      document.querySelector(".main-menu").style.display = "none";
+      document.querySelector(".ham-hide").style.display = "none";
+      document.querySelector(".hamburger").style.display = "block";
+  }
+
+function onKeyPress() {
+  var input = document.getElementById("search-input");
+  
+  input.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+      document.getElementById("search-btn").click();
+      event.preventDefault();
+    }
+  });
+}
+
+
 
      return (
   <div>   
@@ -28,12 +54,13 @@ function Navbar() {
             <a href="./index.html" className="site-logo">
               <img src={brandLogo} alt="logo" style={{width: "10vh" , height: "10vh"}} />
             </a>
-              <div className="hamburger"> <img src={hamburger} width="35px" /> </div>
+              <div className="hamburger" onClick={hamShow} > <img src={hamburger} width="35px" /> </div>
+              <div className="ham-hide" onClick={hamHide} > <img src={cross} width="30px" /> </div>
 
           </div>
           <div className="col-xl-6 col-lg-5">
             <div className="header-search-form">
-              <input id="search-input" type="text" placeholder="Search on thepappustore ...." />
+              <input id="search-input" onKeyPress={onKeyPress} type="text" placeholder="Search on thepappustore ...." />
               <button id="search-btn" onClick={searchClick} > <img src={searchIcon} width="25px  " /> </button>
             </div>
           </div>
@@ -59,9 +86,9 @@ function Navbar() {
       <div className="container">
         {/* menu */}
         <ul className="main-menu">
-          <li><a href="#">Home</a></li>
           <li><a href="#">Women</a></li>
           <li><a href="#">Men</a></li>
+          <li><a href="#">Kids</a></li>
           <li>
             <a href="#">Jewelry
               <span className="new">New</span>
@@ -78,16 +105,16 @@ function Navbar() {
             </ul>
           </li>
           <li>
-            <a href="#">Pages</a>
+            <a href="#">Grocery</a>
             <ul className="sub-menu">
-              <li><a href="./product.html">Product Page</a></li>
-              <li><a href="./category.html">Category Page</a></li>
-              <li><a href="./cart.html">Cart Page</a></li>
-              <li><a href="./checkout.html">Checkout Page</a></li>
-              <li><a href="./contact.html">Contact Page</a></li>
+              <li><a href="./product.html">Flour</a></li>
+              <li><a href="./category.html">Staples</a></li>
+              <li><a href="./cart.html">Veegetables</a></li>
+              <li><a href="./checkout.html">Fruits</a></li>
+              <li><a href="./contact.html">Confectionery</a></li>
             </ul>
           </li>
-          <li><a href="#">Blog</a></li>
+          
         </ul>
       </div>
     </nav>
@@ -95,6 +122,7 @@ function Navbar() {
   {/* Header section end  */}
         </div>
     )
+
 }
 
 export default Navbar

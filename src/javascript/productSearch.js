@@ -1,14 +1,10 @@
 import "../components/Navbar"
 
-var searchIcon = document.querySelector("#search-btn");
-
-
-
 export function searchClick() {
     console.log("click");
-    // if(!document.querySelector("#search-input").value == null)
     var searchQuery = document.querySelector("#search-input").value;
     console.log(searchQuery);
+
     if(searchQuery === "")
     console.log("null");
     else extarctJSON()
@@ -16,30 +12,24 @@ export function searchClick() {
      function extarctJSON() {
         fetch("./json/products.json")
         .then(res => res.json())
-        .then(data => {
-            var len = data.length;
-
-            console.log(data);
-            console.log(len);
-            
-            // for(var i = 0;i < len; i++) {
-            //     var flag = 0;
-            //     var value = data[i].key;
-            //     var valueLen = value.length;
-            // for(var i =0;i < valueLen; i++) {
-            //     if(value[i] === searchQuery) {
-            //         console.log("yes");
-            //         flag = 1;
-            //         break;
-            //     }
-            //     else {
-            //         console.log("no");
-            //         flag = 1;
-            //         break;
-            //     }
-            // }
-           
-            // }
-        })  
+        .then(data => displayValue(data))  
     }
- }
+    function displayValue(data) {
+        console.log(data);
+        
+        var len = data.length;
+
+        for(var i=0;i<len;i++) {
+            var len1 = data[i].key.length;
+            for(var j=0;j<len1;j++) {
+                if(data[i].key[j] == searchQuery) {
+                    console.log("yess");
+                    break;
+                } 
+            }
+        }
+
+      
+        }
+    }
+ 
