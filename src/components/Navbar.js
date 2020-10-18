@@ -86,8 +86,8 @@ function onKeyPress() {
       <div className="container">
         {/* menu */}
         <ul className="main-menu">
-          <li><a href="#">Women</a></li>
-          <li><a href="#">Men</a></li>
+          <li> <Link to={"/womens"}>Womens</Link> </li>
+          <li><a href="#">Mens</a></li>
           <li><a href="#">Kids</a></li>
           <li>
             <a href="#">Jewelry

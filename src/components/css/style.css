@@ -10,7 +10,7 @@ body {
   margin: 0 !important;
   font-family: "Josefin Sans", sans-serif !important;
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1,
@@ -52,10 +52,6 @@ p {
   font-size: 14px;
   color: #585858;
   line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
 }
 
 input:focus,

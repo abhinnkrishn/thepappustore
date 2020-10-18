@@ -1,0 +1,55 @@
+<div className="bs-div">
+                <h3>Best Sellers</h3>
+            <div className="bs-container">
+            </div>
+        </div>
+    )
+
+             ,
+        {},
+        {},
+        {},
+        {},
+        {},
+        {}
+         
+         
+         
+         
+         
+         
+         
+                <div>
+                <img src={b1} alt=""/>
+                <span>.
+                    <h5>Sony D3xYT</h5>
+                    <p>Price: 45,000</p>
+                </span>
+                </div>
+                <div>                   
+                <img src={b2} alt=""/>
+                <span>
+                    <h5>Phillips xHm3</h5>
+                    <p>Price: 2,999</p>
+                <button>Add to Cart</button>
+                    </span>
+                </div>
+                <div>
+                    <img src={b3} alt=""/>
+                </div>
+                <div>
+                     <img src={b4} alt=""/>
+                    <span></span>
+                </div>
+                <div>
+                     <img src={b5} alt=""/>
+                </div>
+                <div>
+                <img src={b6} alt=""/>
+                </div>
+                <div>
+                <img src={b7} alt=""/>
+                </div>
+                <div>
+                <img src={b8} alt=""/>
+                </div>

@@ -1,0 +1,63 @@
+.bs-container::-webkit-scrollbar {
+  display: none;
+}
+
+.bs-div {
+  background-color: #f0f0f0;
+}
+
+.bs-div h3 {
+  margin-left: 10px;
+  padding-top: 5px;
+}
+
+.bs-container {
+  position: relative;
+  width: 100vw;
+  height: fit-content;
+  margin-bottom: 15px;
+  display: flex;
+  overflow: auto;
+}
+.bs-container div {
+  padding: 5px;
+}
+.bs-container div:first-child {
+  margin-left: 5px;
+}
+.bs-container div:last-child {
+  margin-right: 10px;
+}
+
+.bs-container div img {
+  position: relative;
+  border-radius: 10px;
+}
+
+.bs-container div span {
+  background-color: #ffffff;
+  bottom: 5px;
+}
+.bs-container div span h5 {
+  margin-top: 10px;
+}
+.bs-container div span button {
+  margin-bottom: 5px;
+}
+.bs-container div span button {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(250, 144, 31);
+  color: #ffffff;
+  padding: 3px 5px;
+}
+.bs-container div span button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 767px) {
+  .bs-container {
+    height: 250px;
+  }
+}
