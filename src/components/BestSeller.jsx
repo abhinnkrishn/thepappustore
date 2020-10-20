@@ -61,7 +61,7 @@ export default function BestSeller() {
     <img src={item.src} alt="product-image"/>
     <span>
         <h5>{item.title}</h5>
-        <p>Price: {item.price}</p>
+        <p>Price: &#x20B9;{item.price}</p>
         <button>Add to Cart</button>
     </span>
     </div>

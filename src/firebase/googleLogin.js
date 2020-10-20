@@ -15,7 +15,9 @@ const firebaseConfig = {
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
 
-       export function googleSignin() {
+         
+
+      export default function googleSignin() {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase
         .auth()
@@ -27,20 +29,19 @@ const firebaseConfig = {
        var user = result.user;
        console.log(user);
        console.log(result);
+
+       document.getElementsByClassName("signin").innerHTML = user.displayName;
+       document.querySelector(".signin").innerHTML = user.displayName;
+
        })
       .catch(function(error) {
-       // Handle Errors here.
-       var errorCode = error.code;
-       var errorMessage = error.message;
-       // The email of the user's account used.
-     var email = error.email;
-       // The firebase.auth.AuthCredential type that was used.
-       var credential = error.credential;
-      // ...
+       console.log(error);
+      
       });
-    }
-           
 
+    }
+
+    
       
       // function googleSignout() {
       //   firebase

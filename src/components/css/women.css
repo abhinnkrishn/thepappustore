@@ -1,0 +1,45 @@
+.women-product-card {
+  display: flex;
+  margin: 0px 1rem 1rem 1rem;
+  width: 70%;
+}
+
+.product-image {
+  width: 300px;
+  height: 400px;
+  border-radius: 15px;
+  transition: 2s;
+}
+.women-product-image:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.women-product-detail {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.women-product-detail h5:hover {
+  color: #00000080;
+  cursor: pointer;
+}
+.women-product-detail button {
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: #fa901f;
+  color: #ffffff;
+  padding: 5px 15px;
+}
+.women-product-detail button:hover {
+  opacity: 0.8;
+}
+
+.women-star {
+  margin-left: 15px;
+  transition: width 0.1s ease-in-out;
+}
+
+.women-star:hover {
+  cursor: pointer;
+  width: 25px;
+}

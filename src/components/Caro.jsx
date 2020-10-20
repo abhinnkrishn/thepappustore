@@ -38,7 +38,7 @@ export default function Caro() {
                   <img src={item.src} alt="product-image" />
                   <div className="caro-info">
                     <h3>{item.title}</h3>
-                    <p>price: {item.Price}</p>
+                    <p>price: &#x20B9;{item.Price}</p>
                     <p>{item.disc}% OFF</p>
                     <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, maiores? Dignissimos, consectetur, incidunt dolores temporibus minima tempora sint, beatae nisi sed tempore totam at officia quos architecto. Reprehenderit, ratione explicabo.</h5>
                     <button>Add to Cart</button>
