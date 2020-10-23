@@ -17,10 +17,14 @@
   height: fit-content;
   margin-bottom: 15px;
   display: flex;
+  align-items: center;
   overflow: auto;
 }
 .bs-container div {
   padding: 5px;
+  border-radius: 5px;
+  border: 1px #00000080 solid;
+  margin: 0px 5px;
 }
 .bs-container div:first-child {
   margin-left: 5px;
@@ -55,7 +59,12 @@
   cursor: pointer;
   opacity: 0.8;
 }
-
+.bs-left {
+  margin-left: 10px;
+}
+.bs-right {
+  margin-right: auto;
+}
 @media only screen and (max-width: 767px) {
   .bs-container {
     height: 250px;

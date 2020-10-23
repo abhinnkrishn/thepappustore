@@ -10,24 +10,24 @@ export default function Caro() {
 
     var items = [
         {
-            title: "lorem ipsur",
-            Price: "20,000",
-            disc: 30,
+            title: "Vivo x80",
+            Price: "24,000",
+            disc: 14,
             src : b1
         }, {
-            title: "lorem ipsur",
-            Price: "20,000",
+            title: "Godrej ultrakool d350",
+            Price: "235,000",
             disc: 30,
             src : b2
         }, {
-            title: "lorem ipsur",
-            Price: "20,000",
-            disc: 30,
+            title: "Samsung d8 pro",
+            Price: "40,000",
+            disc: 8,
             src : b3
         }, {
-            title: "lorem ipsur",
-            Price: "20,000",
-            disc: 30,
+            title: "Livi Cotton",
+            Price: "3,990",
+            disc: 55,
             src : b4
         },
     ]
@@ -35,15 +35,16 @@ export default function Caro() {
     var display = items.map(item =>
              <div id="slides">
                  <div className="slide">
-                  <img src={item.src} alt="product-image" />
+                  <img src={item.src} alt=""/>
                   <div className="caro-info">
-                    <h3>{item.title}</h3>
+                    <h2><strong>{item.title}</strong></h2>
                     <p>price: &#x20B9;{item.Price}</p>
                     <p>{item.disc}% OFF</p>
                     <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, maiores? Dignissimos, consectetur, incidunt dolores temporibus minima tempora sint, beatae nisi sed tempore totam at officia quos architecto. Reprehenderit, ratione explicabo.</h5>
                     <button>Add to Cart</button>
                  </div>
                  </div>
+                 <hr />
             </div>
         )
 
@@ -51,6 +52,7 @@ export default function Caro() {
     return (
 
         <div>
+            <h3 style={{margin: "7px 15px", textDecoration: "underline"}} ><strong>Winter Clearence</strong></h3>
            {display}
         </div>
     )

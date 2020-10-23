@@ -60,7 +60,7 @@ export default function BestSeller() {
     <div>
     <img src={item.src} alt="product-image"/>
     <span>
-        <h5>{item.title}</h5>
+        <h5><strong>{item.title}</strong></h5>
         <p>Price: &#x20B9;{item.price}</p>
         <button>Add to Cart</button>
     </span>
@@ -68,10 +68,16 @@ export default function BestSeller() {
     )
     return (
         <div className="bs-div">
-                <h3>Best Sellers</h3>
+                <h3><strong>Best Sellers</strong></h3>
             <div className="bs-container">
                 {display}
-            </div>
+            </div>            
+              <div className="bs-scroll">
+                    {/* LEFT scroll button */}
+                <span className="bs-left" >LEFT</span>
+                {/* RIGHT scroll button */}
+                <span className="bs-right" >RIGHT</span>
+              </div>
         </div>
     )
         

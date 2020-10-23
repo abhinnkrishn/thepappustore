@@ -21,6 +21,7 @@ function Navbar() {
       document.querySelector(".main-menu").style.display = "block";
       document.querySelector(".ham-hide").style.display = "block";
       document.querySelector(".hamburger").style.display = "none";
+      document.querySelector(".container").style.boxShadow = "none";
   }
   function hamHide() {
     //Hide NAV
@@ -28,6 +29,7 @@ function Navbar() {
       document.querySelector(".main-menu").style.display = "none";
       document.querySelector(".ham-hide").style.display = "none";
       document.querySelector(".hamburger").style.display = "block";
+      document.querySelector(".container").style.boxShadow = "0px 1px #00000020";
   }
 
 function onKeyPress() {
@@ -49,22 +51,30 @@ function onKeyPress() {
     <div className="header-top">
       <div className="container">
         <div className="row">
-          <div className="col-lg-2 text-center text-lg-left">
+          <div className="col-xl-5 col-lg-5 col-md-12 col-sm-12 text-center ml-auto">
+            <div className="nav-img-name text-center" >
            {/* logo  */}
-            <a href="./index.html" className="site-logo">
-              <img src={brandLogo} alt="logo" style={{width: "10vh" , height: "10vh"}} />
-            </a>
+            <Link to={"/"} >
+              <img 
+              src={brandLogo} 
+              alt="logo" 
+              style={{width: "10vh" , height: "10vh"}}
+              className="nav-logo pb-2"
+              />
+            </Link>
+            <h1 className="nav-brand-name">the<strong>dukaandar</strong></h1>
+            </div>
               <div className="hamburger" onClick={hamShow} > <img src={hamburger} width="35px" /> </div>
               <div className="ham-hide" onClick={hamHide} > <img src={cross} width="30px" /> </div>
 
           </div>
-          <div className="col-xl-6 col-lg-5">
+          <div className="col-xl-7 col-lg-7 col-md-10 col-sm-10 mr-auto">
             <div className="header-search-form">
               <input id="search-input" onKeyPress={onKeyPress} type="text" placeholder="Search on thepappustore ...." />
               <button id="search-btn" onClick={searchClick} > <img src={searchIcon} width="25px  " /> </button>
             </div>
           </div>
-          <div className="col-xl-4 col-lg-5">
+          <div className="ml-auto col-xl-4 col-lg-5">
             <div className="user-panel">
               <div className="up-item">
                 <img src={userProfile} className="user-profile-image" />
@@ -75,7 +85,7 @@ function onKeyPress() {
                   <img src={shoppingCart} className="shopping-cart-image" />
                   <span>0</span>
                 </div>
-                <a href="#">Shopping Cart</a>
+                <Link to={"/"} className="shopping-cart" >Shopping Cart</Link>
               </div>
             </div>
           </div>
@@ -87,31 +97,31 @@ function onKeyPress() {
         {/* menu */}
         <ul className="main-menu">
           <li> <Link to={"/womens"}>Womens</Link> </li>
-          <li><a href="#">Mens</a></li>
-          <li><a href="#">Kids</a></li>
+          <li><Link>Mens</Link></li>
+          <li><Link>Kids</Link></li>
           <li>
-            <a href="#">Jewelry
+            <Link>Jewelry
               <span className="new">New</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">Shoes</a>
+            <Link>Shoes</Link>
             <ul className="sub-menu">
-              <li><a href="#">Sneakers</a></li>
-              <li><a href="#">Sandals</a></li>
-              <li><a href="#">Formal Shoes</a></li>
-              <li><a href="#">Boots</a></li>
-              <li><a href="#">Flip Flops</a></li>
+              <li><Link>Sneakers</Link></li>
+              <li><Link>Sandals</Link></li>
+              <li><Link>Formal Shoes</Link></li>
+              <li><Link>Boots</Link></li>
+              <li><Link>Flip Flops</Link></li>
             </ul>
           </li>
           <li>
-            <a href="#">Grocery</a>
+            <Link href="#">Grocery</Link>
             <ul className="sub-menu">
-              <li><a href="./product.html">Flour</a></li>
-              <li><a href="./category.html">Staples</a></li>
-              <li><a href="./cart.html">Veegetables</a></li>
-              <li><a href="./checkout.html">Fruits</a></li>
-              <li><a href="./contact.html">Confectionery</a></li>
+              <li><Link>Flour</Link></li>
+              <li><Link>Staples</Link></li>
+              <li><Link>Veegetables</Link></li>
+              <li><Link>Fruits</Link></li>
+              <li><Link>Confectionery</Link></li>
             </ul>
           </li>
           
