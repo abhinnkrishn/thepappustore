@@ -17,11 +17,11 @@ const firebaseConfig = {
 
          
 
-      export default function googleSignin() {
+      function googleSignin() {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase
         .auth()
-        .signInWithPopup(provider)
+        .signInWithRedirect(provider)
         .then(function(result) {
        // This gives you a Google Access Token. You can use it to access the Google API.
        var token = result.credential.accessToken;
@@ -40,6 +40,8 @@ const firebaseConfig = {
       });
 
     }
+
+    export { googleSignin }
 
     
       

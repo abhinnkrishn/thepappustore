@@ -1,6 +1,7 @@
-import "../components/Navbar"
+var matchedData = []
 
-export function searchClick() {
+function searchClick() {
+
     console.log("click");
     var searchQuery = document.querySelector("#search-input").value;
     console.log(searchQuery);
@@ -12,24 +13,28 @@ export function searchClick() {
      function extarctJSON() {
         fetch("./json/products.json")
         .then(res => res.json())
-        .then(data => displayValue(data))  
-    }
-    function displayValue(data) {
+        .then(data => {
+
         console.log(data);
         
+        matchedData = []
         var len = data.length;
-
+        
         for(var i=0;i<len;i++) {
-            var len1 = data[i].key.length;
-            for(var j=0;j<len1;j++) {
-                if(data[i].key[j] == searchQuery) {
+            var keyLen = data[i].key.length;
+            for(var j=0;j<keyLen;j++) {
+                if(data[i].key[j] === searchQuery) {
                     console.log("yess");
+                    matchedData.push(data[i]);
                     break;
                 } 
             }
         }
-
-      
-        }
+        console.log(matchedData);
+    })  
     }
+  
+    }
+
+    export { searchClick, matchedData }
  

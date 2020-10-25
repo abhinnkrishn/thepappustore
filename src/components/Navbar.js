@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import {searchClick} from "../javascript/productSearch.js"
+import { Link, useHistory } from 'react-router-dom'
+import {searchClick } from "../javascript/productSearch.js"
 // Styles
 import './css/style.css'
 import './css/bootstrap.min.css'
@@ -32,13 +32,20 @@ function Navbar() {
       document.querySelector(".container").style.boxShadow = "0px 1px #00000020";
   }
 
-function onKeyPress() {
-  var input = document.getElementById("search-input");
+  const history = useHistory();
+
+  function clikctosearch() {
+    searchClick();
+    history.push("/product");
+  }
+
+  function onKeyPress() {
+    var input = document.getElementById("search-input");
   
-  input.addEventListener("keydown", function(event) {
-    if (event.keyCode === 13) {
+    input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
       document.getElementById("search-btn").click();
-      event.preventDefault();
+      event.stopImmediatePropagation();
     }
   });
 }
@@ -71,7 +78,7 @@ function onKeyPress() {
           <div className="col-xl-7 col-lg-7 col-md-10 col-sm-10 mr-auto">
             <div className="header-search-form">
               <input id="search-input" onKeyPress={onKeyPress} type="text" placeholder="Search on thepappustore ...." />
-              <button id="search-btn" onClick={searchClick} > <img src={searchIcon} width="25px  " /> </button>
+              <button id="search-btn" onClick={clikctosearch} > <img src={searchIcon} width="25px  " /> </button>
             </div>
           </div>
           <div className="ml-auto col-xl-4 col-lg-5">

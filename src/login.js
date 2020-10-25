@@ -1,10 +1,10 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 import './components/css/login.css'
 import googleLogo from "./components/svg/google.svg"
 import brandLogo from "./components/img/logo1.png"
-import googleSignin from './firebase/googleLogin'
+import { googleSignin } from './firebase/googleLogin'
 import "./components/Navbar"
-import {Link} from "react-router-dom"
 
 function login() {
         
@@ -24,7 +24,7 @@ function login() {
                     <button className="login-button">Login</button>
                      <Link className="login-forgot-password">forgot password?</Link>
                          <hr />
-                    <button className="google-login" onClick={googleSignin()} > <span className="google-image"><img src={googleLogo} alt=""/> </span> Login with Google</button>
+                    <button className="google-login" onClick={googleSignin()} > <span className="google-image"><img src={googleLogo} alt=""/></span>Login with Google</button>
                     <Link to={"/"}>Back to Home</Link>
                 </form>
             </div>
