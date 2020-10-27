@@ -1,0 +1,175 @@
+[
+  {
+    "name": "iPhone 12 Space Black",
+    "price": "1,12,322" ,
+    "description": "",
+    "rating": 4.8 ,
+    "stock": "in stock",
+    "image": "",
+    "key": ["mobile", "iphone", "apple"]
+
+  },
+   {
+    "name": "OnePlus 9",
+    "price":"58,999",
+    "description": "",
+    "rating": 4.2,
+    "stock": "out of stock",
+    "image": "",
+    "key": ["mobile", "one plus", "oneplus"]
+
+  }, {
+    "name": "Google Pixel 5",
+    "price": "78,654",
+    "description": "",
+    "rating": 3.4 ,
+    "stock": "in stock",
+    "image": "",
+    "key": ["google", "mobile", "pixel", "google pixel"]
+
+  },  {
+    "name": "Sneakers White",
+    "price": "15,999",
+    "description": "",
+    "rating": 4.1,
+    "stock": "in stock",
+    "image": "",
+    "key": ["shoes", "shoe", "sport shoes", "sports shoes", "sneaker", "sneakers"]
+
+  }, {
+    "name": "Snikers",
+    "price": "30",
+    "description": "",
+    "rating": 3.9,
+    "stock": "in stock",
+    "image": "",
+    "key": ["snikers", "sneaker", "sneakers", "snikers", "toffe", "chocolate"]
+
+  }, {
+    "name": "Lenovo Ghoda",
+    "price": "85,999",
+    "description": "",
+    "rating": 5.0,
+    "stock": "out of stock",
+    "image": "",
+    "key": ["lenovo", "ideapad", "lenovo idepad", "ghoda"]
+
+  }, {
+    "name": "Pokimane's SIMP Shoutout collection",
+    "price": "1,000",
+    "description": "",
+    "rating": 5.0,
+    "stock": "always in stock",
+    "image": "",
+    "key": ["pokimane", "simp"]
+
+  },{
+    "name": "Belle Delphene Bathwater",
+    "price": "30,000",
+    "description": "",
+    "rating":4.0 ,
+    "stock": "always in stock",
+    "image": "",
+    "key": ["bathwater", "bath", "water", "belle delphene", "simp"]
+
+  },{
+    "name": "Hitachi Air conditioner",
+    "price": "39,000",
+    "description": "",
+    "rating": 3.1,
+    "stock": "in stock",
+    "image": "",
+    "key": ["ac", "hitachi", "lg","air condition", "air conditiner"]
+
+  },{
+    "name": "Motorola G5s+",
+    "price": "14,999",
+    "description": "",
+    "rating": 2.3,
+    "stock": "in stock",
+    "image": "",
+    "key": ["apple", "motorola", "oneplus", "one plus", "mobile"]
+
+  },{
+    "name": "Lenovo Mobile",
+    "price": "18,000",
+    "description": "",
+    "rating": 4.7,
+    "stock": "out of stock",
+    "image": "",
+    "key": ["mobile", "lenovo", "phone"]
+
+  },{
+    "name": "Fastrack Z+ Series",
+    "price": "3,999",
+    "description": "",
+    "rating": 3.8,
+    "stock": "out of stock",
+    "image": "",
+    "key": ["watch", "wrist watch", "fastrack"]
+
+  }, {
+    "name": "Apple",
+    "price": "100",
+    "description": "",
+    "rating": 5.0,
+    "stock": "in stock" ,
+    "image": "",
+    "key": ["fruit", "fruits", "apple", "grocery", "vegetables", "vegetable"]
+
+  },{
+    "name": "Potato",
+    "price": "50",
+    "description": "",
+    "rating": 3.5,
+    "stock": "in stock",
+    "image": "",
+    "key": ["vegetable", "vegetables", "potato", "grocery"]
+
+  },{
+    "name": "Onions",
+    "price": "2,000",
+    "description": "",
+    "rating": 3.9,
+    "stock":"in stock" ,
+    "image": "",
+    "key": ["onion", "onions", "grocery", "vegetables", "vegetable"]
+
+  },{
+    "name": "Tomato",
+    "price": "100",
+    "description": "",
+    "rating": 3.4,
+    "stock": "in stock",
+    "image": "",
+    "key": ["tomato", "grocery", "vegetables", "vegetable"]
+
+  },{
+    "name": "Lady Finger",
+    "price": "60",
+    "description": "",
+    "rating": 4.6,
+    "stock": "out of stock",
+    "image": "",
+    "key": ["lady finger","grocery", "vegetables", "vegetable", "bhindi"]
+
+  },{
+    "name": "Green Chillies",
+    "price": "10",
+    "description": "",
+    "rating":4.5 ,
+    "stock":"in stock" ,
+    "image": "",
+    "key": ["green chilli", "chilli", "chillies", "grocery", "vegetables", "vegetable"]
+
+  },{
+    "name": "Green Peas",
+    "price": "50" ,
+    "description": "",
+    "rating": 5.0,
+    "stock": "in stock",
+    "image": "",
+    "key": ["green peas", "matar", "panner", "pea", "peas", "grocery", "vegetables", "vegetable"]
+
+  }
+]       
