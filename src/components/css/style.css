@@ -72,13 +72,16 @@ ol {
   padding: 18px 0 14px 0px;
 }
 .nav-img-name {
+  position: relative;
   display: flex;
   width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav-brand-name {
   width: fit-content;
-  padding-right: 30px;
+  /* padding-right: 30px; */
 }
 
 .nav-logo {
@@ -110,6 +113,9 @@ ol {
   border: none;
   cursor: pointer;
   background-color: transparent;
+}
+.nav-cart-signin {
+  margin-left: auto;
 }
 
 .user-panel .up-item {
@@ -242,8 +248,7 @@ ol {
   position: absolute;
   z-index: 1;
   display: none;
-  right: 1rem;
-  top: 0;
+  right: -3rem;
   cursor: pointer;
 }
 
@@ -410,6 +415,10 @@ ol {
   }
   .hamburger {
     display: none;
+  }
+  .nav-brand-name {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 

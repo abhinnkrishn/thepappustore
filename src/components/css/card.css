@@ -10,7 +10,7 @@ body {
 }
 .card-container {
   display: flex;
-  width: 75%;
+  width: fit-content !important;
   max-height: fit-content;
   margin-left: 2rem;
   padding: 10px;

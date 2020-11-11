@@ -8,6 +8,7 @@ import b5 from "./img/best_seller_images/banner-5.jpg"
 import b6 from "./img/best_seller_images/banner-6.jpg"
 import b7 from "./img/best_seller_images/banner-7.jpg"
 import b8 from "./img/best_seller_images/banner-8.jpg"
+import pd from "./img/productDisplay286.png"
 // import "../javascript/bestSeller"
 
 export default function BestSeller() {
@@ -52,7 +53,32 @@ export default function BestSeller() {
              src: b8,
             title: "Bass",
             price: "9,999"
-        }
+        },
+        {
+             src: pd,
+            title: "Bikaji Bhujia",
+            price: "999"
+        },
+        {
+             src: pd,
+            title: "Gulabi RoseWater",
+            price: "199"
+        },
+        {
+             src: pd,
+            title: "Google Home Mini",
+            price: "3,999"
+        },
+        {
+             src: pd,
+            title: "LifeBouy Hand Sanitizer",
+            price: "349"
+        },
+        {
+             src: pd,
+            title: "Premier N-95 Mask",
+            price: "99"
+        },
          
     ]
    
@@ -72,12 +98,6 @@ export default function BestSeller() {
             <div className="bs-container">
                 {display}
             </div>            
-              <div className="bs-scroll">
-                    {/* LEFT scroll button */}
-                <span className="bs-left" >LEFT</span>
-                {/* RIGHT scroll button */}
-                <span className="bs-right" >RIGHT</span>
-              </div>
         </div>
     )
         

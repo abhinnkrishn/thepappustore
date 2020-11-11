@@ -1,16 +1,23 @@
+.caro-container {
+  background-color: #f0f0f0;
+}
+
 #slides {
   position: relative;
   margin-top: 10px;
   margin-bottom: 10px;
+  background-color: #ffffff;
 }
 .slide {
   display: flex;
   height: fit-content;
-  margin-left: auto;
 }
 
 .caro-info {
-  margin-right: auto;
+  margin-right: 1rem;
+}
+.caro-info h2 {
+  margin-top: 10px;
 }
 
 .caro-info button {
@@ -27,4 +34,19 @@
 .caro-info button:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+@media only screen and (max-width: 767px) {
+  #slides {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 30px;
+  }
+  .slide {
+    display: block;
+    padding: 1rem;
+  }
+  .caro-info h2 {
+    margin-top: 0px;
+  }
 }

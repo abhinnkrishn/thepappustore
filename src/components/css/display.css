@@ -1,6 +1,4 @@
 .model {
-  /* width: 60vw; */
-  /* height: 80vh; */
   margin-left: 10px;
   display: flex;
   margin-bottom: 10px;
@@ -55,4 +53,29 @@
 .model-wishlist:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+@media only screen and (max-width: 767px) {
+  .model {
+    display: block;
+  }
+  .model-thumb {
+    height: 5vh;
+    width: fit-content;
+  }
+  .model-image {
+    position: relative;
+    top: 50px;
+  }
+  .model-image img {
+    width: 60vw;
+  }
+  .model-image img,
+  .model-thumb {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .model-details {
+    position: relative;
+    top: 60px;
+  }
 }

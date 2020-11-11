@@ -57,7 +57,7 @@ function footer() {
           <div className="footer-widget contact-widget">
             <h2>Address</h2>
             <div className="con-info">
-              <p>thedukaandar Pvt. Ltd</p>
+              <p>theDukaandar Pvt. Ltd.</p>
             </div>
             <div className="con-info">
               <p>New Delhi -06, P.O. BOX 68</p>

@@ -38,7 +38,7 @@ export default function Caro() {
                   <img src={item.src} alt=""/>
                   <div className="caro-info">
                     <h2><strong>{item.title}</strong></h2>
-                    <p>price: &#x20B9;{item.Price}</p>
+                    <p>Price: &#x20B9;{item.Price}</p>
                     <p>{item.disc}% OFF</p>
                     <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, maiores? Dignissimos, consectetur, incidunt dolores temporibus minima tempora sint, beatae nisi sed tempore totam at officia quos architecto. Reprehenderit, ratione explicabo.</h5>
                     <button>Add to Cart</button>
@@ -51,8 +51,8 @@ export default function Caro() {
 
     return (
 
-        <div>
-            <h3 style={{margin: "7px 15px", textDecoration: "underline"}} ><strong>Winter Clearence</strong></h3>
+        <div className="caro-container" >
+            <h1 style={{margin: "7px 15px", textDecoration: "underline", paddingTop: "10px"}} ><strong>Winter Clearence</strong></h1>
            {display}
         </div>
     )

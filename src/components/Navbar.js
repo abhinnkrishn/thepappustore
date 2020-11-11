@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { createContext } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import {searchClick } from "../javascript/productSearch.js"
+// import {storeUser} from "../firebase/googleLogin"
+import {MyContext} from "../Context/Context"
 // Styles
 import './css/style.css'
 import './css/bootstrap.min.css'
@@ -12,16 +14,25 @@ import searchIcon from "./svg/search.svg"
 import hamburger from "./svg/hamburger.svg"
 import cross from "./svg/hide.svg"
 
-
-function Navbar() {
-
-  function hamShow() {
+export default function Navbar() {
+ 
+//  window.addEventListener("load", authData)
+//   function authData() {
+//   if(storeUser){
+//     document.querySelector(".signin").innerHTML = storeUser.displayName
+//     console.log("IF ENTERED");
+//   }
+// }
+  
+   function hamShow() {
       // Show NAV
       document.querySelector(".main-navbar").style.display = "block";
       document.querySelector(".main-menu").style.display = "block";
       document.querySelector(".ham-hide").style.display = "block";
       document.querySelector(".hamburger").style.display = "none";
       document.querySelector(".container").style.boxShadow = "none";
+      document.querySelector(".container").style.paddingBottom = "0";
+
   }
   function hamHide() {
     //Hide NAV
@@ -30,13 +41,14 @@ function Navbar() {
       document.querySelector(".ham-hide").style.display = "none";
       document.querySelector(".hamburger").style.display = "block";
       document.querySelector(".container").style.boxShadow = "0px 1px #00000020";
+      document.querySelector(".container").style.paddingBottom = "10px";
   }
 
   const history = useHistory();
 
   function clikctosearch() {
-    searchClick();
     history.push("/product");
+    searchClick();
   }
 
   function onKeyPress() {
@@ -50,49 +62,47 @@ function Navbar() {
   });
 }
 
-
-
-     return (
+ return (
   <div>   
     <header className="header-section">
     <div className="header-top">
       <div className="container">
         <div className="row">
-          <div className="col-xl-5 col-lg-5 col-md-12 col-sm-12 text-center ml-auto">
-            <div className="nav-img-name text-center" >
+          
+            <div className="nav-img-name" >
            {/* logo  */}
             <Link to={"/"} >
               <img 
               src={brandLogo} 
               alt="logo" 
-              style={{width: "10vh" , height: "10vh"}}
+              style={{width: "8vh"}}
               className="nav-logo pb-2"
               />
             </Link>
-            <h1 className="nav-brand-name">the<strong>dukaandar</strong></h1>
-            </div>
+            <h1 className="nav-brand-name">the<strong>Dukaandar</strong></h1>
               <div className="hamburger" onClick={hamShow} > <img src={hamburger} width="35px" /> </div>
-              <div className="ham-hide" onClick={hamHide} > <img src={cross} width="30px" /> </div>
+              <div className="ham-hide" onClick={hamHide} > <img src={cross} width="20px" /> </div>
+            </div>
 
-          </div>
-          <div className="col-xl-7 col-lg-7 col-md-10 col-sm-10 mr-auto">
+          
+          <div className="col-xl-7 col-lg-7 col-md-10 col-sm-10 ml-auto mr-auto">
             <div className="header-search-form">
               <input id="search-input" onKeyPress={onKeyPress} type="text" placeholder="Search on thepappustore ...." />
               <button id="search-btn" onClick={clikctosearch} > <img src={searchIcon} width="25px  " /> </button>
             </div>
           </div>
-          <div className="ml-auto col-xl-4 col-lg-5">
+          <div className="nav-cart-signin col-xl-4 col-lg-5">
             <div className="user-panel">
               <div className="up-item">
-                <img src={userProfile} className="user-profile-image" />
-                <Link to={'/login'} className="signin" >Sign In</Link> 
+               <img src={userProfile} className="user-profile-image" />
+                <Link to={'/login'} className="signin">Signin</Link> 
               </div>
               <div className="up-item">
                 <div className="shopping-card">
                   <img src={shoppingCart} className="shopping-cart-image" />
-                  <span>0</span>
+                  <span>3</span>
                 </div>
-                <Link to={"/"} className="shopping-cart" >Shopping Cart</Link>
+                <Link to={"/cart"} className="shopping-cart" >Shopping Cart</Link>
               </div>
             </div>
           </div>
@@ -136,10 +146,9 @@ function Navbar() {
       </div>
     </nav>
   </header>
-  {/* Header section end  */}
         </div>
+        
     )
 
 }
 
-export default Navbar

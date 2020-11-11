@@ -13,11 +13,8 @@ import b4 from "./components/img/womenProduct/single-product/4.jpg"
 import star from "./components/svg/star.svg"
 import Slider from "./components/BestSeller"
 
-        var thumbs = [t1, t2, t3, t4];
-        var model = [b1, b2, b3, b4];
-
-
-
+    var thumbs = [t1, t2, t3, t4];
+    var model = [b1, b2, b3, b4];
 
 export default class Display extends Component {
  
@@ -27,10 +24,6 @@ export default class Display extends Component {
         modelImage: model[0]
     };
   }
-
-
-
-
     render() {
         return (
             <div>
@@ -46,7 +39,7 @@ export default class Display extends Component {
                             onClick={ () => {
                                 
                                 this.setState({modelImage: model[index]}) 
-                                console.log(this)
+                                
                             }
                              } />    
                            

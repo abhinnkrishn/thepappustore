@@ -1,3 +1,96 @@
+.bs-container::-webkit-scrollbar {
+  height: 15px;
+  padding-top: 10px;
+}
+
+/* Track */
+.bs-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+.bs-container::-webkit-scrollbar-thumb {
+  background: rgb(250, 144, 31);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.bs-container::-webkit-scrollbar-thumb:hover {
+  background: rgb(248, 155, 55);
+}
+
+
+
+
+
+<div className="card-container">
+                <div className="card-image">
+                    <img src={productImage} alt="Product Display" width="200px" />
+                </div>
+                <div className="card-info">
+                    <h5 className="card-title"><strong>Lorem Ipsum</strong></h5>
+                    <p className="card-price">38933</p>
+                    <h6 className="card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente beatae excepturi doloribus quis debitis consequuntur, quaerat amet impedit. Non, corporis.</h6>
+                    <button className="cart-add-to-cart">Add to Cart</button>
+                    <img src={star} alt="Favrouite" className="card-fav-star" width="15px"/>
+                    <span>Favoruite</span>
+                </div>
+            </div>
+
+
+
+export default function Display() {
+
+        const thumbs = [t1, t2, t3, t4]
+        const model = [b1, b2, b3, b4]
+        var currentModel = b1
+        function changeImage(index) {
+           currentModel = model[index]
+            
+        }
+
+    return (
+        <div>
+            <Navbar />
+            <div className="model">
+                <div className="model-thumb">
+                    {
+                        thumbs.map((thumb, index) =>
+                            <img src={thumb} key={index} alt="Product-thumb" width="75px" onClick={ (index) => changeImage(index)} />    
+                         )
+                    }
+                </div>
+                <div className="model-image">
+                  
+                    <img src={currentModel} alt="Product-image"  />
+                </div>
+            </div>
+            <Footer />
+        </div>
+    )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div className="bs-div">
                 <h3>Best Sellers</h3>
             <div className="bs-container">
