@@ -15,7 +15,7 @@ function footer() {
               <section className="footer-section">
     <div className="container">
       <div className="footer-logo text-center">
-        <Link href="#" ><img src={brandLogo} alt="" style={{width: "10vh" , height: "10vh", marginBottom: "5px"}} /></Link>
+        <Link to="/" ><img src={brandLogo} alt="" style={{width: "10vh" , height: "10vh", marginBottom: "5px"}} /></Link>
         <h3 style={{color: "#ffffff"}}>the<strong>Dukaandar</strong></h3>
       </div>
       <div className="row">

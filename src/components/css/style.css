@@ -81,7 +81,6 @@ ol {
 
 .nav-brand-name {
   width: fit-content;
-  /* padding-right: 30px; */
 }
 
 .nav-logo {
@@ -115,9 +114,10 @@ ol {
   background-color: transparent;
 }
 .nav-cart-signin {
+  display: block;
   margin-left: auto;
+  width: fit-content;
 }
-
 .user-panel .up-item {
   display: inline-block;
   font-size: 14px;
@@ -133,12 +133,14 @@ ol {
 }
 
 .user-panel .up-item:first-child {
-  margin-right: 29px;
+  margin-left: auto;
 }
 
 .shopping-card {
   display: inline-block;
+  margin-left: auto;
   position: relative;
+  
 }
 
 .shopping-card span {
