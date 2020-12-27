@@ -112,7 +112,7 @@ export default function Navbar() {
                     onKeyPress={onKeyPress}
                     onChange={updateSearchQuery}
                     type="text"
-                    placeholder="Search on thepappustore ...."
+                    placeholder="Search on Dukaan...."
                   />
                   <button id="search-btn" onClick={search}>
                     <img src={searchIcon} width="25px" />
