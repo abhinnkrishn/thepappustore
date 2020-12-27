@@ -11,8 +11,10 @@ const firebaseConfig = {
   storageBucket: "thedukaandar.appspot.com",
   messagingSenderId: "278257760391",
   appId: "1:278257760391:web:0458aecb5df9ecc7102022",
-  measurementId: "G-WCX736JTBR"
+  measurementId: "G-WCX736JTBR",
 };
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+firebase.analytics();

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import firebase from "firebase";
 import "./firebase/firebase";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Toast from "./components/Toast";
 import "./components/css/women.css";
 import b1 from "./components/img/womenProduct/1.jpg";
 import b2 from "./components/img/womenProduct/2.jpg";
@@ -20,20 +21,76 @@ import b12 from "./components/img/womenProduct/12.jpg";
 import star from "./components/svg/star.svg";
 
 export default function Women() {
-  console.log("LOGIN STATUS", firebase.auth());
-  //REDIRECT
-  firebase
-    .auth()
-    .getRedirectResult()
-    .then(function (result) {
-      var user = result.user;
-      console.log("REDIRECT", result);
-    })
-    .catch(function (error) {
-      console.log("ERROR IN REDIRECT", error);
-    });
+  const [email, setEmail] = useState("");
+  const [auth, setAuth] = useState(false);
 
-  var images = [b1, b10, b11, b4, b5, b6, b7, b8, b9, b2, b3, b12];
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      setEmail(user.email);
+      setAuth(true);
+    } else {
+      setEmail("");
+      setAuth(false);
+    }
+  });
+
+  const db = firebase.firestore();
+
+  // Adding items to the DB
+  function addToCart(event) {
+    let key = event.target.value;
+    let item = items[key];
+    let img = parseInt(key + 1, 10);
+
+    if (email != "") {
+      db.collection(`cart-${email}`)
+        .add({
+          name: item.title,
+          price: item.price,
+          email: email,
+        })
+        .then((ref) => {
+          console.log("Added doc with ID: ", ref.id);
+
+          // Show Toast
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function () {
+            x.className = x.className.replace("show", "");
+          }, 3000);
+        });
+    } else {
+      // Show Toast
+      var x = document.getElementById("snackbar");
+      x.className = "show";
+      setTimeout(function () {
+        x.className = x.className.replace("show", "");
+      }, 3000);
+    }
+  }
+
+  var items = [
+    {
+      image: b1,
+      title: "DIVERSE WOMENS WHITE PEPLUM TOP",
+      price: "5,999",
+    },
+    { image: b10, title: "Lorem Ipsum", price: "3,999" },
+    {
+      image: b11,
+      title: "Lorem Ipsum",
+      price: "3,999",
+    },
+    { image: b4, title: "Lorem Ipsum", price: "3,999" },
+    { image: b5, title: "Lorem Ipsum", price: "3,999" },
+    { image: b6, title: "Lorem Ipsum", price: "3,999" },
+    { image: b7, title: "Lorem Ipsum", price: "3,999" },
+    { image: b8, title: "Lorem Ipsum", price: "3,999" },
+    { image: b9, title: "Lorem Ipsum", price: "3,999" },
+    { image: b2, title: "Lorem Ipsum", price: "3,999" },
+    { image: b3, title: "Lorem Ipsum", price: "3,999" },
+    { image: b12, title: "Lorem Ipsum", price: "3,999" },
+  ];
 
   const history = useHistory();
   const routeChange = () => {
@@ -45,34 +102,44 @@ export default function Women() {
     <div>
       <Navbar />
 
-      {images.map((image, index) => (
+      {items.map((item, index) => (
         <div className="women-product-card" key={index}>
           <div
             className="women-product-image"
             onClick={index === 0 ? routeChange : console.log("SOME ERROR!!!")}
           >
-            <img src={image} alt="product-image" width="200px" />
+            <img src={item.image} alt="product-image" width="200px" />
           </div>
           <div className="women-product-detail">
             <h5
               onClick={index === 0 ? routeChange : console.log("SOME ERROR!!!")}
             >
-              <strong>Lorem Ipsum</strong>
+              <strong>{item.title}</strong>
             </h5>
-            <p className="women-product-price">&#x20B9;2,999</p>
+            <p className="women-product-price">&#x20B9;{item.price}</p>
             <p className="women-product-dis">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vero
               officiis quidem excepturi dignissimos odio qui sint, iure quas,
               commodi quod ipsam, corrupti minima ullam delectus laborum! Sed,
               corporis illo!
             </p>
-            <button>Add to Cart</button>
+            <button onClick={addToCart} value={index}>
+              Add to Cart
+            </button>
             <img src={star} width="20px" className="women-star" />
           </div>
           <hr />
         </div>
       ))}
       <Footer />
+      {/* toast */}
+      <div>
+        {auth ? (
+          <Toast message={"Added to Cart"} />
+        ) : (
+          <Toast message={"Signin to Add to Cart"} />
+        )}
+      </div>
     </div>
   );
 }

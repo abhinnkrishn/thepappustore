@@ -1,3 +1,37 @@
+      <div className="cart-navbar">
+        <Link to={"/"}>
+          <img src={Logo} alt="Home" className="cart-image" width="50px" />
+        </Link>
+        <h1 className="cart-name">
+          the<strong>Dukaandar</strong>
+        </h1>
+        <h1 className="cart-cart-text">Cart</h1>
+          </div>
+          {/* cart container */}
+      <div className="cart-container">
+          {/* Cart Products list */}
+        <div className="cart-cards">
+          {data.map((data, index) => (
+            <Card data={data} index={index} />
+          ))}
+              </div>
+              {/* cart prduct info */}
+        <div className="cart-info">
+          <h5 className="">
+            <strong>Subtotal(3 Items): 949</strong>
+          </h5>
+          <input type="text" placeholder="APPLY COUPON" />
+          <p id="select-coupon">Select</p>
+          <br />
+          <button>Checkout</button>
+        </div>
+      </div>
+   
+   
+   
+   
+   
+   
     // console.log("STATE IN PRODUCT PAGE", hello);
     
   //   function clicktosearch() {

@@ -1,23 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Toast from "./components/Toast";
 import firebase from "firebase";
 import "./firebase/firebase.js";
 import "./components/css/login.css";
 import googleLogo from "./components/svg/google.svg";
 import brandLogo from "./components/img/logo1.png";
 
-function login() {
+function Login() {
+  const [toast, setToast] = useState(false);
 
   var provider = new firebase.auth.GoogleAuthProvider();
 
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      console.log("AUTH STATE: USER IS LOGGED IN");
+      setToast(true);
       console.log(user);
     } else {
-      console.log("AUTH STATE: USER IS LOGGED OUT");
+      setToast(false);
     }
   });
+
+  useEffect(() => {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function () {
+      x.className = x.className.replace("show", "");
+    }, 3000);
+  }, [toast]);
 
   function googleLogin(event) {
     event.preventDefault();
@@ -90,8 +100,13 @@ function login() {
           </Link>
         </form>
       </div>
+      {toast ? (
+        <Toast message={"Login Sucessfull..."} />
+      ) : (
+        <Toast message={"Logged out..."} />
+      )}
     </div>
   );
 }
 
-export default login;
+export default Login;
