@@ -1,4 +1,9 @@
 ## The Dukaandar Store
+The Dukaandar is an Online e-commerce store which provides you with a wide range of products from clothing, cosmetics to electronics.
+The frontend of the website is made in ReactJS and in the backed firebase is used, this website is primarily frontend only with Google Authentication for logging in and cart access.
+
+<strong>TODO:</strong> Payment Gateway Integration, UI fixes, Optimization, a full-fleged Firebase backend with media storage.
+
 See the Live Demo of this website here: [Netlify](https://thedukaandar.netlify.app/)
 
 ## Available Scripts
