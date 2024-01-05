@@ -5,7 +5,7 @@ import "./firebase/firebase";
 import Logo from "./components/img/logo1.png";
 import Card from "./components/Card";
 import "./components/css/cart.css";
-import "./javascript/cart.js";
+// import "./javascript/cart.js";
 
 export default function Cart() {
   const [data, setData] = useState([]);
