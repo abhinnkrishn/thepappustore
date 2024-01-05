@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 // import MyProvider from "./Context/Context"
 
-import Login from "./Login";
+import Login from "./login.jsx";
 import "./components/css/style.css";
 import "./components/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
